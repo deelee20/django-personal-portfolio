@@ -18,19 +18,20 @@
 
   <!-- Bootstrap CSS -->
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  
 
 
 
-  <link rel="stylesheet" href="{% static "portfolio/custom.css" %}">
+  <link rel="stylesheet" href="{% static 'portfolio/bootstrapTheme.css' %}">
 
+ 
 
 
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 
 
 
-  <link rel="icon" type="image/png" href="{% static "portfolio/DnoodleIcon.png" %}">
+  <link rel="icon" type="image/png" href="{% static 'portfolio/DnoodleIcon.png' %}">
 
 
 
@@ -40,63 +41,33 @@
 
 
 
-<body>
+<body id="page-top">
+
+
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-dark text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger text-white" href="{% url 'home' %}">Dillon Lee</a>
+                  <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-white" href="{% static 'portfolio/dillonResume.pdf' %}">Resume</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-white" href="https://www.linkedin.com/in/dillon-lee-24ba3b1a9/">Linkedin</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-white" href="{% url 'blog:all_blogs' %}">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
 
 
-  <nav id="topNav" class="navbar navbar-expand-md navbar-light">
 
-    <div class="container">
 
-      <a class="navbar-brand" href="{% url 'home' %}">
+  <br>
+  <br>
+  <br>
+  <br>
 
-        <img src="{% static "portfolio/DnoodleIcon.png" %}" width="30" height="30" class="d-inline-block align-top" alt="Dillon's Logo">
-
-        <span>Dillon Lee</span>
-
-      </a>
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-
-        <span class="navbar-toggler-icon"></span>
-
-      </button>
-
-      <div class="collapse navbar-collapse text-center" id="navbarNav">
-
-        <ul class="navbar-nav ml-auto">
-
-          <li class="nav-item">
-
-            <a class="nav-link" href="{% static 'portfolio/resume.pdf' %}">Resume</a>
-
-          </li>
-
-          <li class="nav-item">
-
-            <a class="nav-link" href="https://www.linkedin.com/in/nick-walter/" target="_blank">LinkedIn</a>
-
-          </li>
-
-          <li class="nav-item">
-
-            <a class="nav-link" href="https://twitter.com/thedeelee23" target="_blank">Twitter</a>
-
-          </li>
-
-          <li>
-
-            <a role="button" href="{% url 'blog:all_blogs' %}" class="btn btn-primary">Blog</a>
-
-          </li>
-
-        </ul>
-
-      </div>
-
-    </div>
-
-  </nav>
 
   <div class="container">
 

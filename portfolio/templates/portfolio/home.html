@@ -10,11 +10,12 @@
 
 
 
+
 <div class="row justify-content-center my-3">
 
   <div class="col-3">
 
-    <img src="{% static 'portfolio/nerd.jpg' %}" class="img-fluid">
+    <img src="{% static 'portfolio/PromPic.jpg' %}" class="img-fluid">
 
     
   </div>
@@ -27,7 +28,7 @@
 
   <div class="col-md-9 text-center">
 
-    <h1 id="hometext" class="font-weight-bold">Dillon Lee is Commander-in-Chief at DirtyNoodleGang and lives in College Station Texas 😊</h1>
+    <h1 id="hometext" class="font-weight-bold">Dillon Lee is a computer scientist/entrapanuer/artist living in College Station Texas 😊</h1>
 
   </div>
 
@@ -43,7 +44,7 @@
 
   {% for project in projects %}
 
-  <div class="col-lg-4 col-md-6">
+   <div class="row justify-content-center no-gutters mb-3 mb-lg-3">
 
 
 
@@ -51,7 +52,7 @@
 
     <a href="{{ project.url }}">
 
-      <img src="{{ project.image.url }}" class="img-fluid mb-2">
+      <img src="{{ project.image.url }}" class="card-img-top">
 
     </a>
 
@@ -59,13 +60,18 @@
 
 
 
-    <img src="{{ project.image.url }}" class="img-fluid mb-2">
+    <div class="col-md-9 col-lg-9">
+        <img class="img-fluid mb-3 mb-lg-0" src="{{ project.image.url }}">
+    </div>
 
     {% endif %}
 
-    <h3>{{ project.title }}</h3>
-
-    <p>{{ project.description }}</p>
+  <div class="col-xl-9 col-lg-9">
+     <div class="featured-text text-center text-lg-center">
+         <h4>{{ project.title }}</h4>
+         <p class="text-black-50 mb-0">{{ project.description }}</p>
+     </div>
+  </div>
 
 
 
@@ -78,3 +84,5 @@
 
 
 {% endblock %}
+
+ 
